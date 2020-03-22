@@ -110,9 +110,10 @@ y_hat_val_stats = scalery.inverse_transform(np.asarray(y_hat_val_stats_scaled).r
 #modello non riscalato
 y_hat_val_stats_not_scaled = res_not_scaled.predict(X_val)
 
-plt.plot(index_val,y_val,'o',label='Inline label')
-plt.plot(index_val,y_hat_val_stats,'r',label='Inline label')
-plt.plot(index_val,y_hat_val_stats_not_scaled,'b',label='Inline label')
+plt.plot(index_val,y_val,'o',label='Target validazione reali')
+plt.plot(index_val,y_hat_val_stats,'r',label='Modello scalato')
+plt.plot(index_val,y_hat_val_stats_not_scaled,'b',label='Modello non scalato')
+plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0.)
 plt.show()
 
 
@@ -146,6 +147,7 @@ residual_pred = y_test - y_pred_rescaled
 print("Errore medio sul dataset di test")
 print(np.mean(residual_pred))
 
-plt.plot(index_test,y_test,'o')
-plt.plot(index_test,y_pred_rescaled,'r')
+plt.plot(index_test,y_test,'o',legend="Targed di test reali")
+plt.plot(index_test,y_pred_rescaled,'r',legend="Previsioni del modello")
+plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0.)
 plt.show()
