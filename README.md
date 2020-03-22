@@ -2,7 +2,7 @@
 
 
 Il progetto è strutturato come segue:
-1. main.py : script contenente il main() del codice. Richiama le funzionalità di recupero dei dati del database, di preparazione dei dati e plotting dei dati
+1. main.py : script contenente il main() del codice. Richiama le funzionalità di recupero dei dati del database, di preparazione dei dati e plotting dei dati. 
 All'interno del file sono anche implementati i modelli usati per fare la previsione del target.
 2. package "data_preparation": contiene utility per la preparazione dei dati ed il loro plotting
 3. package "db_connection": contiene utility per il recupero dei dati dal database.
