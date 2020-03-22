@@ -113,7 +113,7 @@ y_hat_val_stats_not_scaled = res_not_scaled.predict(X_val)
 plt.plot(index_val,y_val,'o',label='Target validazione reali')
 plt.plot(index_val,y_hat_val_stats,'r',label='Modello scalato')
 plt.plot(index_val,y_hat_val_stats_not_scaled,'b',label='Modello non scalato')
-plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0.)
+plt.legend()
 plt.show()
 
 
@@ -147,7 +147,7 @@ residual_pred = y_test - y_pred_rescaled
 print("Errore medio sul dataset di test")
 print(np.mean(residual_pred))
 
-plt.plot(index_test,y_test,'o',legend="Targed di test reali")
-plt.plot(index_test,y_pred_rescaled,'r',legend="Previsioni del modello")
-plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0.)
+plt.plot(index_test,y_test,'o',label="Targed di test reali")
+plt.plot(index_test,y_pred_rescaled,'r',label="Previsioni del modello")
+plt.legend()
 plt.show()
